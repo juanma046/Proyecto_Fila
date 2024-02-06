@@ -6,6 +6,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Quino CABRON COMEME LA PITON</h1>
+    <h1></h1>
 </body>
 </html>
