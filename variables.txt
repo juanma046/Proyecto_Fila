@@ -6,3 +6,4 @@ tiempo = $time
 id_juego = $id_juego
 nombre_juego = $nom_juego
 
+var
