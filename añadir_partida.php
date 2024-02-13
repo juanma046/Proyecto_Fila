@@ -1,3 +1,11 @@
+<?php
+	require 'conexion.php';
+    
+    $sql= "SELECT * FROM usuarios";
+
+    $resultado= $mysqli->query($sql);
+?>
+
 <!doctype html>
 <html lang="es">
 	<head>
@@ -24,11 +32,12 @@
 							<!-- Usuarios -->
 							<label for="formControlInput" class="form-label">Usuarios</label>
 							<select class="form-control" id="formControlInput" name="id_usuario">
-								<option value="1">Pedro Perez</option>
-								<option value="2">Manuel Jesus Fernandez</option>
-                                <option value="3">Florentino Perez</option>
-								<option value="4">Armando Problemas</option>
-							</select>
+                                <?php
+                                    while($fila = $resultado->fetch_assoc()){
+                                        echo "<option value='$fila[id_usuario]'> $fila[nombre]</option>";
+                                    }
+                                ?>
+                            </select>
 						</div>
 						
 						<div class="form-group">
