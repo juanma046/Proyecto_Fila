@@ -53,8 +53,6 @@ $resultado = $mysqli->query($sql);
 		<table id="tabla" class="display" style="width:100%">
 			<thead>
 				<tr>
-					<th>Numero de Partida</th>
-					<th>Numero del usuario</th>
 					<th>Numero del juego</th>
 					<th>Tiempo (horas)</th>
 					<th></th>
@@ -65,14 +63,13 @@ $resultado = $mysqli->query($sql);
 				<?php
 				while ($fila = $resultado->fetch_assoc()) {
 					echo "<tr>";
-					echo "<td>$fila[ID_PARTIDA]</td>";
-					echo "<td>$fila[ID_USUARIO]</td>";
 					echo "<td>$fila[ID_JUEGO]</td>";
 					echo "<td>$fila[TIEMPO]</td>";
-					echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[ID_PARTIDA]'>Eliminar</td>";
+					echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[ID_PARTIDA]'>Eliminar</a></td>";
 					echo "</tr>";
 				}
 				$mysqli->close();
+                    echo "<a class='btn btn-danger' href='index.php'>Volver</a>"
 				?>
 			</tbody>
 		</table>
