@@ -52,6 +52,8 @@ echo "</table>";
 
     $mysqli->close();
 ?>
+<br>
+<button type="button" class="btn btn-primary"><a href="juegos.php" class="text-white">Lista de Juegos</a></button>
 
 </div>
 </body>
