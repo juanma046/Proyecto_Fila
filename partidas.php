@@ -75,7 +75,7 @@ $resultado = $mysqli->query($sql);
 				?>
 			</tbody>
 		</table>
-        <br>
+		<br>
         <a class='btn btn-danger' href='index.php'>Volver</a>
 	</div>
 	</div>
