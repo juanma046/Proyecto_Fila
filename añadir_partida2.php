@@ -15,13 +15,12 @@
 			 require 'conexion.php';
 
 			 //Obtengo los datos introducidos en el formulario anterior
-			 $id_part = $_POST['id_partida'];
 			 $id_usu = $_POST['id_usuario'];
 			 $time = $_POST['tiempo'];
 			 $id_juego = $_POST['id_juego'];
 
 			 //Se prepara la sentencia SQL
-			 $sql = "INSERT INTO proyecto_actividadjuegos (id_partida,id_usuario,tiempo,id_juego) VALUES('$id_part','$id_usu','$time','$id_juego')";
+			 $sql = "INSERT INTO proyecto_actividadjuegos (id_usuario,tiempo,id_juego) VALUES('$id_usu','$time','$id_juego')";
 		 
 			 //Se ejecuta la sentencia y se guarda el resultado en $resulado
 			 $resultado = $mysqli->query($sql);
