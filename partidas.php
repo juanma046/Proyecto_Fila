@@ -69,11 +69,10 @@ $resultado = $mysqli->query($sql);
 					echo "</tr>";
 				}
 				$mysqli->close();
-                    echo "<a class='btn btn-danger' href='index.php'>Volver</a>"
 				?>
 			</tbody>
 		</table>
-
+        <a class='btn btn-danger' href='index.php'>Volver</a>"
 	</div>
 	</div>
 
