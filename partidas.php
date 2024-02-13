@@ -72,7 +72,7 @@ $resultado = $mysqli->query($sql);
 				?>
 			</tbody>
 		</table>
-        <a class='btn btn-danger' href='index.php'>Volver</a>
+        <a class='btn btn-danger' href='index.php'>Volver</a>"
 	</div>
 	</div>
 
