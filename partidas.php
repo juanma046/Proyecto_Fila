@@ -1,6 +1,8 @@
 <?php
 require 'conexion.php';
-$sql = "SELECT * FROM partidas";
+$nombre=$_GET['NOMBRE'];
+$idget=$_GET['ID_USUARIO'];
+$sql = "SELECT * FROM partidas where ID_USUARIO=$idget";
 $resultado = $mysqli->query($sql);
 ?>
 
@@ -36,8 +38,10 @@ $resultado = $mysqli->query($sql);
 <body>
 	<div class="container">
 		<div class="row">
-			<h1>Partidas</h1>
-		</div>
+        <?php
+		echo "<h1>Partidas del usuario $nombre</h1>"
+		?>
+            </div>
 		<br>
 
 		<div class="row">

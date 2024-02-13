@@ -31,11 +31,12 @@
 		</script>
 </head>
 <body>
+    <div class="container">
 <?php
 
 echo "<h1>Jugadores</h1>";
 
-echo "<table border='1' id='tabla' class='display' style='width:100%'>";
+echo "<table id='tabla' class='display' style='width:100%'>";
 echo "<tr>";
     echo "<th>Nombre</th>";
     echo "<th>DNI</th>";
@@ -43,7 +44,7 @@ echo "</tr>";
 
 while($fila = $resultado->fetch_assoc()){
     echo "<tr>";
-        echo "<td><a href='partidas.php?ID_USUARIO=$fila[ID_USUARIO]'>$fila[NOMBRE]</a></td>";
+        echo "<td><a href='partidas.php?ID_USUARIO=$fila[ID_USUARIO]&NOMBRE=$fila[NOMBRE]'>$fila[NOMBRE]</a></td>";
         echo "<td>$fila[DNI]</td>";
     echo "</tr>";
 }
@@ -51,11 +52,8 @@ echo "</table>";
 
     $mysqli->close();
 ?>
-    <div class="row">
-				<!-- Registrar -->
-				<button type="button" class="btn btn-primary"><a href="añadir_partida.php" class="text-white">Añadir una partida</a></button>
-			</div>
 
+</div>
 </body>
 
 </html>
