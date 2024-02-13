@@ -44,7 +44,7 @@ echo "</tr>";
 
 while($fila = $resultado->fetch_assoc()){
     echo "<tr>";
-        echo "<td><a href='partidas.php?ID_USUARIO=$fila[ID_USUARIO]&&NOMBRE=$fila[NOMBRE]'>  $fila[NOMBRE]</a></td>";
+        echo "<td><a href='partidas.php?ID_USUARIO=$fila[ID_USUARIO]&NOMBRE=$fila[NOMBRE]'>$fila[NOMBRE]</a></td>";
         echo "<td>$fila[DNI]</td>";
     echo "</tr>";
 }
