@@ -62,17 +62,20 @@ $resultado = $mysqli->query($sql);
 			<tbody>
 				<?php
 				while ($fila = $resultado->fetch_assoc()) {
+					$sql2= "SELECT NOMBRE FROM JUEGOS WHERE ID_JUEGO=$fila[ID_JUEGO]";
+					$resultado2=$mysqli->query($sql2);
+					$fila2 = $resultado2->fetch_assoc();
 					echo "<tr>";
-					echo "<td>$fila[ID_JUEGO]</td>";
+					echo "<td>$fila2[NOMBRE]</td>";
 					echo "<td>$fila[TIEMPO]</td>";
-					echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[ID_PARTIDA]'>Eliminar</a></td>";
+					echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[ID_PARTIDA]'>Eliminar</td>";
 					echo "</tr>";
 				}
 				$mysqli->close();
 				?>
 			</tbody>
 		</table>
-        <br>
+		<br>
         <a class='btn btn-danger' href='index.php'>Volver</a>
 	</div>
 	</div>
