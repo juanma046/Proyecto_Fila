@@ -11,7 +11,7 @@
     <!-- Required meta tags -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link rel="stylesheet" src="css/estilos.css" type="text/css">
+		<link rel="stylesheet" src="estilos.css" type="text/css">
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/jquery.dataTables.min.css">
