@@ -1,6 +1,7 @@
 <?php
 require 'conexion.php';
-$sql = "SELECT * FROM partidas";
+$idget=$_GET['ID_USUARIO'];
+$sql = "SELECT * FROM partidas where ID_USUARIO=$idget";
 $resultado = $mysqli->query($sql);
 ?>
 
