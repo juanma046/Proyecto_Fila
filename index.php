@@ -15,27 +15,25 @@
 <body>
 <?php
 
-echo "<h1>Torneo IAW</h1>";
+echo "<h1>Jugadores</h1>";
 
 echo "<table border='1'>";
 echo "<tr>";
     echo "<th>Nombre</th>";
-    echo "<th>Partidas</th>";
-    echo "<th>Puntos</th>";
+    echo "<th>DNI</th>";
 echo "</tr>";
 
 while($fila = $resultado->fetch_assoc()){
     echo "<tr>";
-        echo "<td><a href='partidas.php?id_participante=$fila[id_participante]'>$fila[nombre]</a></td>";
-        echo "<td>$fila[partidas]</td>";
-        echo "<td>$fila[puntos]</td>";
+        echo "<td><a href='partidas.php?ID_USUARIO=$fila[ID_USUARIO]'>$fila[NOMBRE]</a></td>";
+        echo "<td>$fila[DNI]</td>";
     echo "</tr>";
 }
 echo "</table>";
 
     $mysqli->close();
 ?>
-    <p><a href="registrar1.php">Registrar partida</a> <a href="resetear.php">Resetear torneo</a></p>
+    <p><a href="registrar1.php">Registrar partida</a>
 
 </body>
 
