@@ -68,7 +68,7 @@ $resultado = $mysqli->query($sql);
 					echo "<tr>";
 					echo "<td>$fila2[NOMBRE]</td>";
 					echo "<td>$fila[TIEMPO]</td>";
-					echo "<td><a class='btn btn-danger' href='eliminar.php?id=$fila[ID_PARTIDA]'>Eliminar</td>";
+					echo "<td><a class='btn btn-danger' href='eliminar.php?id_juego=$fila[ID_JUEGO]&id_usuario=$fila[ID_USUARIO]&tiempo=$fila[TIEMPO]'>Eliminar</td>";
 					echo "</tr>";
 				}
 				$mysqli->close();
