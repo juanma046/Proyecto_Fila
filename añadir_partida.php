@@ -34,7 +34,7 @@
 							<select class="form-control" id="formControlInput" name="id_usuario">
                                 <?php
                                     while($fila = $resultado->fetch_assoc()){
-                                        echo "<option value='$fila[id_usuario]'> $fila[nombre]</option>";
+                                        echo "<option value='$fila[id_usuario]'> $fila[NOMBRE]</option>";
                                     }
                                 ?>
                             </select>
