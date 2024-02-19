@@ -31,10 +31,10 @@
                     <div class="form-group">
 							<!-- Usuarios -->
 							<label for="formControlInput" class="form-label">Usuarios</label>
-							<select class="form-control" id="formControlInput" name="id_usuario">
+							<select class="form-control" id="formControlInput" name="ID_USUARIO">
                                 <?php
                                     while($fila = $resultado->fetch_assoc()){
-                                        echo "<option value='$fila[id_usuario]'> $fila[nombre]</option>";
+                                        echo "<option value='$fila[ID_USUARIO]'> $fila[NOMBRE]</option>";
                                     }
                                 ?>
                             </select>
@@ -43,13 +43,13 @@
 						<div class="form-group">
 							<!-- Tiempo jugado  -->
 							<label for="formControlInput" class="form-label">Tiempo jugado(h)</label>
-							<input type="number" class="form-control" id="formControlInput" name="tiempo">
+							<input type="number" class="form-control" id="formControlInput" name="TIEMPO">
 						</div>
 						
 						<div class="form-group">
 							<!-- Juegos -->
 							<label for="formControlInput" class="form-label">Juegos</label>
-							<select class="form-control" id="formControlInput" name="id_juego">
+							<select class="form-control" id="formControlInput" name="ID_JUEGO">
 								<option value="1">Bloodborne</option>
 								<option value="2">Fortnite</option>
                                 <option value="3">Persona 3 Reload</option>

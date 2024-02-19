@@ -17,23 +17,23 @@
     require 'conexion.php';
 
     //Obtengo los datos introducidos en el formulario anterior
-    $id_usu = $_POST['ID_USUARIO'];
-    $time = $_POST['TIEMPO'];
-    $id_juego = $_POST['ID_JUEGO'];
+    $id_usu = $_POST['id_usuario'];
+    $time = $_POST['tiempo'];
+    $id_juego = $_POST['id_juego'];
 
     //Preparo una sentencia para obtener los datos que quiero de la BD
-    $sql = "SELECT * FROM usuarios WHERE ID_USUARIO LIKE $id_usu";
+    $sql = "SELECT * FROM usuarios WHERE id_usuario LIKE $id_usu";
     //La ejecuto y guardo el resultado en $resultado2
     $resultado2 = $mysqli->query($sql);
 
     //Se prepara la sentencia SQL
-    $sql = "INSERT INTO proyecto_actividadjuegos (ID_USUARIO,TIEMPO,ID_JUEGO) VALUES('$id_usu','$time','$id_juego')";
+    $sql = "INSERT INTO proyecto_actividadjuegos (id_usuario,tiempo,id_juego) VALUES('$id_usu','$time','$id_juego')";
 
     //Se ejecuta la sentencia y se guarda el resultado en $resulado
     $resultado = $mysqli->query($sql);
 
     while ($fila = $resultado2->fetch_assoc()) {
-        $sql = "UPDATE usuarios SET tiempo_total=$fila[tiempo_total]+$time WHERE ID_USUARIO = $id_usu";
+        $sql = "UPDATE usuarios SET n_partidas=$fila[n_partidas]+1, tiempo_total=$fila[tiempo_total]+$time WHERE id_usuario = $id_usu";
     }
     $resultado2 = $mysqli->query($sql);
 
