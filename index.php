@@ -39,13 +39,13 @@ echo "<h1>Jugadores</h1>";
 echo "<table id='tabla' class='display' style='width:100%'>";
 echo "<tr>";
     echo "<th>Nombre</th>";
-    echo "<th>DNI</th>";
+    echo "<th>TIEMPO_TOTAL</th>";
 echo "</tr>";
 
 while($fila = $resultado->fetch_assoc()){
     echo "<tr>";
         echo "<td><a href='partidas.php?ID_USUARIO=$fila[ID_USUARIO]&NOMBRE=$fila[NOMBRE]'>$fila[NOMBRE]</a></td>";
-        echo "<td>$fila[DNI]</td>";
+        echo "<td>$fila[TIEMPO_TOTAL]</td>";
     echo "</tr>";
 }
 echo "</table>";
