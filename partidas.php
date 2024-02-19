@@ -45,7 +45,7 @@ $resultado = $mysqli->query($sql);
 		<br>
 
 		<div class="row">
-		<a class='btn btn-primary' href='registrar.php'>Registrar</a>
+		<a class='btn btn-primary' href='añadir_partida.php'>Añadir nueva partida</a>
 		</div>
 		<br>
 		<br>
