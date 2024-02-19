@@ -29,17 +29,6 @@
 					<!-- Completar atributos de form -->
 					<form action="añadir_partida2.php" id="registro" name="registro" autocomplete="off" method="post">
                     <div class="form-group">
-							<!-- Usuarios -->
-							<label for="formControlInput" class="form-label">Usuarios</label>
-							<select class="form-control" id="formControlInput" name="ID_USUARIO">
-                                <?php
-                                    while($fila = $resultado->fetch_assoc()){
-                                        echo "<option value='$fila[ID_USUARIO]'> $fila[NOMBRE]</option>";
-                                    }
-                                ?>
-                            </select>
-						</div>
-						
 						<div class="form-group">
 							<!-- Tiempo jugado  -->
 							<label for="formControlInput" class="form-label">Tiempo jugado(h)</label>
