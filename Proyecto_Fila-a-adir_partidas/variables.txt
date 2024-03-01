@@ -1,0 +1,9 @@
+nombre = $nom_usu
+id_usuario = $id_usu
+dni = $dni
+id_partida = $id_part
+tiempo = $time
+id_juego = $id_juego
+nombre_juego = $nom_juego
+
+var a
